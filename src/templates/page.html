@@ -1,0 +1,42 @@
+---
+title: Blog
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<main class="main">
+		<div class="h1-wrap">
+			<div class="container">
+				<h1 class="h1">Blog</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="content">
+				<div class="content__item">
+					<div class="blog-slider">
+						{% for item in items.blog__slider %}
+						<div class="blog-slider__item">
+							<img src="{{item.src}}" alt="{{item.alt}}">
+						</div>
+						{% endfor %}
+					</div>
+					<div class="content__textual">
+						<div class="content__aside">
+							{% for item in items.aside %}
+							<p class="content__info">{{item.info}}</p>
+							<p class="content__subinfo">{{item.subinfo}}</p>
+							{% endfor %}
+						</div>
+						<div class="content__text">
+							<h2>Top  WordPress  Themes  of  2012</h2>
+							<p>Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu.</p>
+							<p>Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis.</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar"></div>
+		</div>
+	</main>
+{% endblock %}
