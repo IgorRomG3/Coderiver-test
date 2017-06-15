@@ -12,13 +12,13 @@ title: Blog
 		</div>
 		<div class="container">
 			<div class="content">
+				{% for item in items.contant__item %}
 				<div class="content__item">
-					<div class="blog-slider">
-						{% for item in items.blog__slider %}
-						<div class="blog-slider__item">
-							<img src="{{item.src}}" alt="{{item.alt}}">
-						</div>
-						{% endfor %}
+					<div class="content__img-left">
+						<img src="{{item.imgLeft.src}}" alt="{{item.imgLeft.src}}">
+					</div>
+					<div class="content__img">
+						{{item.img | safe}}
 					</div>
 					<div class="content__textual">
 						<div class="content__aside">
@@ -28,15 +28,69 @@ title: Blog
 							{% endfor %}
 						</div>
 						<div class="content__text">
-							<h2>Top  WordPress  Themes  of  2012</h2>
-							<p>Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu.</p>
-							<p>Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis.</p>
+							<h2 class="h2">{{item.text.h2}}</h2>
+							<p>{{item.text.par1}}</p>
+							<p>{{item.text.par2}}</p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
+					<div class="content__gradient"></div>
+				</div>
+				{% endfor %}
+				<div class="content__item">
+					<div class="content__img-left">
+						<img src="img/absolute-img-3.png" alt="imgLeft3">
+					</div>
+					<p class="quote">
+						Write anything you want here in this quotable area. Something unique you want people to learn about your website or some cool random fact. Its totally up to you. Write anything you want here in this quotable area. Something unique you want people to learn about your website or some cool random fact. Its totally up to you.
+					</p>
+					<div class="content__gradient"></div>
+				</div>
+				<div class="content__item">
+					<div class="content__img-left">
+						<img src="img/absolute-img-3.png" alt="imgLeft4">
+					</div>
+					<h2 class="h2">Some of the best freebies on the web<br>
+					<a href="#" class="h2__subtitle">www.bestpsdfreebies.com</a>
+					</h2>
+					<p>
+						Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei.
+					</p>
+					<div class="content__gradient"></div>
 				</div>
 			</div>
-			<div class="sidebar"></div>
+			<div class="sidebar">
+				<div class="sidebar__item">
+					<h2 class="h2 h2_bg"><span class="h2__span">AbouT Jetro</span></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praese nt libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elemen tum imperdiet. Duis sagittis ipsum. </p>
+				</div>
+				<div class="sidebar__item">
+					<h2 class="h2 h2_bg"><span class="h2__span">Categories</span></h2>
+					<ul class="sidebar__menu">
+						{% for item in items.sidebar__menu %}
+						<li class="sidebar__menu__item">
+							<a href="#" class="sidebar__link">{{item.li | safe}}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="sidebar__item">
+					<h2 class="h2 h2_bg"><span class="h2__span">Photo Gallery</span></h2>
+					<ul class="sidebar__portfolio">
+						{% for item in items.sidebar__portfolio %}
+						<li class="sidebar__portfolio__item">
+							<img src="{{item.src}}" alt="{{item.alt}}">
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<ul class="poginator">
+				<li class="poginator__item"><a href="#" class="poginator__link">1</a></li>
+				<li class="poginator__item"><a href="#" class="poginator__link">2</a></li>
+				<li class="poginator__item"><a href="#" class="poginator__link">3</a></li>
+			</ul>
 		</div>
 	</main>
 {% endblock %}

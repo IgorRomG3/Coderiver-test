@@ -18,18 +18,34 @@ menu = [
 ]
 %},
 {% set 
-blog__slider = [
+contant__item = [
 	{
-		src: '../img/slide-1.png',
-		alt:'slide-1'
+		imgLeft:{
+			src:"img/absolute-img-1.png",
+			alt:"imgLeft-1"
+		},
+		img: '<div class="blog-slider">
+			<div><img src="img/slide-1.png" alt="slide-1"></div>
+			<div><img src="img/slide-1.png" alt="slide-2"></div>
+			<div><img src="img/slide-1.png" alt="slide-3"></div>
+			</div>',
+		text:{
+			h2:"Top  WordPress  Themes  of  2012",
+			par1:"Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu.",
+			par2:"Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis  ..."
+		}	
 	},
 	{
-		src: '../img/slide-1.png',
-		alt:'slide-1'
-	},
-	{
-		src: '../img/slide-1.png',
-		alt:'slide-1'
+		imgLeft:{
+			src:"img/absolute-img-2.png",
+			alt:"imgLeft-2"
+		},
+		img: '<img src="img/img-blog-2.png" alt="blog-img-2">',
+		text:{
+			h2:"Jesus  Typography  Wallpaper  Giveaway!",
+			par1:"Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu.",
+			par2:"Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis  ..."
+		}
 	}
 ]
 %},
@@ -46,6 +62,64 @@ aside = [
 	{
 		info: 'Comments',
 		subinfo:'4'
+	}
+]
+%},
+{% set 
+sidebar__menu = [
+	{
+		li:'Video(<span class="sidebar__count">3</span>)'
+	},
+	{
+		li:'Sports(<span class="sidebar__count">5</span>)'
+	},
+	{
+		li:'Media(<span class="sidebar__count">2</span>)'
+	},
+	{
+		li:'Entertainment(<span class="sidebar__count">7</span>)'
+	},
+	{
+		li:'Life(<span class="sidebar__count">4</span>)'
+	},
+	{
+		li:'Super Cool Stuff(<span class="sidebar__count">8</span>)'
+	}
+]
+%},
+{% set 
+sidebar__portfolio = [
+	{
+		src:'img/rect.png',
+		alt:"rect"
+	},
+	{
+		src:'img/rect.png',
+		alt:"rect"
+	},
+	{
+		src:'img/rect.png',
+		alt:"rect"
+	},
+	{
+		src:'img/rect.png',
+		alt:"rect"
+	},
+	{
+		src:'img/rect.png',
+		alt:"rect"
+	},
+	{
+		src:'img/rect.png',
+		alt:"rect"
+	},
+	{
+		src:'img/rect.png',
+		alt:"rect"
+	},
+	{
+		src:'img/rect.png',
+		alt:"rect"
 	}
 ]
 %}
