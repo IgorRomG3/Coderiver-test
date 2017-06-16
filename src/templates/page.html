@@ -5,7 +5,7 @@ title: Blog
 
 {% block content %}
 	<main class="main">
-		<div class="h1-wrap">
+		<div class="title-wrap">
 			<div class="container">
 				<h1 class="h1">Blog</h1>
 			</div>
@@ -15,7 +15,7 @@ title: Blog
 				{% for item in items.contant__item %}
 				<div class="content__item">
 					<div class="content__img-left">
-						<img src="{{item.imgLeft.src}}" alt="{{item.imgLeft.src}}">
+						<img src="{{item.imgLeft.src}}" alt="{{item.imgLeft.alt}}">
 					</div>
 					<div class="content__img">
 						{{item.img | safe}}
@@ -23,12 +23,14 @@ title: Blog
 					<div class="content__textual">
 						<div class="content__aside">
 							{% for item in items.aside %}
-							<p class="content__info">{{item.info}}</p>
-							<p class="content__subinfo">{{item.subinfo}}</p>
+							<span class="content__info">{{item.info}}</span>
+							<span class="content__subinfo">{{item.subinfo}}</span>
 							{% endfor %}
 						</div>
 						<div class="content__text">
-							<h2 class="h2">{{item.text.h2}}</h2>
+							<h2 class="h2">
+								<a href="#" class="h2__link">{{item.text.h2}}</a>
+							</h2>
 							<p>{{item.text.par1}}</p>
 							<p>{{item.text.par2}}</p>
 						</div>
@@ -41,17 +43,20 @@ title: Blog
 					<div class="content__img-left">
 						<img src="img/absolute-img-3.png" alt="imgLeft3">
 					</div>
-					<p class="quote">
+					<div class="content__wrap">
+						<p class="quote">
 						Write anything you want here in this quotable area. Something unique you want people to learn about your website or some cool random fact. Its totally up to you. Write anything you want here in this quotable area. Something unique you want people to learn about your website or some cool random fact. Its totally up to you.
-					</p>
+						</p>
+					</div>
 					<div class="content__gradient"></div>
 				</div>
 				<div class="content__item">
 					<div class="content__img-left">
-						<img src="img/absolute-img-3.png" alt="imgLeft4">
+						<img src="img/absolute-img-4.png" alt="imgLeft4">
 					</div>
-					<h2 class="h2">Some of the best freebies on the web<br>
-					<a href="#" class="h2__subtitle">www.bestpsdfreebies.com</a>
+					<h2 class="h2">
+						<a href="#" class="h2__link">Some of the best freebies on the web</a><br>
+						<a href="#" class="h2__sublink">www.bestpsdfreebies.com</a>
 					</h2>
 					<p>
 						Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei.
@@ -61,21 +66,33 @@ title: Blog
 			</div>
 			<div class="sidebar">
 				<div class="sidebar__item">
-					<h2 class="h2 h2_bg"><span class="h2__span">AbouT Jetro</span></h2>
+					<h2 class="h2 h2_theme_gradient">
+						<span class="h2__span">
+							<a href="#" class="h2__link">AbouT Jetro</a>
+						</span>
+					</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praese nt libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elemen tum imperdiet. Duis sagittis ipsum. </p>
 				</div>
 				<div class="sidebar__item">
-					<h2 class="h2 h2_bg"><span class="h2__span">Categories</span></h2>
+					<h2 class="h2 h2_theme_gradient">
+						<span class="h2__span">
+							<a href="#" class="h2__link">Categories</a>
+						</span>
+					</h2>
 					<ul class="sidebar__menu">
 						{% for item in items.sidebar__menu %}
 						<li class="sidebar__menu__item">
-							<a href="#" class="sidebar__link">{{item.li | safe}}</a>
+							<a href="#" class="sidebar__link">{{item.title | safe}}</a>
 						</li>
 						{% endfor %}
 					</ul>
 				</div>
 				<div class="sidebar__item">
-					<h2 class="h2 h2_bg"><span class="h2__span">Photo Gallery</span></h2>
+					<h2 class="h2 h2_theme_gradient">
+						<span class="h2__span">
+							<a href="#" class="h2__link">Photo Gallery</a>
+						</span>
+					</h2>
 					<ul class="sidebar__portfolio">
 						{% for item in items.sidebar__portfolio %}
 						<li class="sidebar__portfolio__item">
@@ -86,11 +103,7 @@ title: Blog
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<ul class="poginator">
-				<li class="poginator__item"><a href="#" class="poginator__link">1</a></li>
-				<li class="poginator__item"><a href="#" class="poginator__link">2</a></li>
-				<li class="poginator__item"><a href="#" class="poginator__link">3</a></li>
-			</ul>
+			{% include "partials/_poginator.html" %}
 		</div>
 	</main>
 {% endblock %}

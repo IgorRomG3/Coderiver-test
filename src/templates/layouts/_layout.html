@@ -23,10 +23,18 @@
         <div class="logo">
           <a href="#" class="logo__link">Jet<span class="logo__span">ro</span></a>
         </div>
+        <button class="toggle">
+          <span class="toggle__bar"></span>
+          <span class="toggle__bar"></span>
+          <span class="toggle__bar"></span>
+        </button>
+        <div class="clearfix clearfix__sm"></div>
         <ul class="menu">
           {% for item in items.menu %}
           <li class="menu__item">
-            <a href="#" class="menu__link">{{item.title}}</a>
+            <a {% if item.title == title %} class="menu__link active"{% endif %} href="#" class="menu__link">
+              {{item.title}}
+            </a>
           </li>
           {% endfor %}
         </ul>
@@ -47,14 +55,14 @@
     <div class="container">
       <div class="footer__wrap">
         <div class="footer__item">
-          <h2 class="h2 h2_bot">About Jetro</h2>
+          <h2 class="h2 h2_footer_white">About Jetro</h2>
           <p>Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas adolescens vim te, per at tritani aperiri.
             Adhuc invenire convenire his ea. Id mei vitae denique, in eam commodo veritus disputando.Pro et erant delicata,
             eu vim essent imperdiet accommodare, dictas deseruisse ius an. Solet everti definitionem id ius, sonet oporteat
             cu vim.</p>
         </div>
         <div class="footer__item">
-          <h2 class="h2 h2_bot">Twitter Widget</h2>
+          <h2 class="h2 h2_footer_white">Twitter Widget</h2>
           <div class="footer__mssg">
             <p class="footer__text"><span class="footer__span">@pixelmater</span>What an awesome design with great functionality :)</p>
             <p class="footer__time">about 1 hour ago</p>
@@ -64,6 +72,7 @@
             <p class="footer__time">about 2 hour ago</p>
           </div>
         </div>
+        <div class="clearfix"></div>
       </div>
     </div>
   </footer>

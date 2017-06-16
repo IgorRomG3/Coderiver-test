@@ -59,26 +59,31 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 52px;
+    width: 35px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
-    background: transparent;
+    background: #000;
     color: transparent;
     top: 50%;
     margin-top: -10px;
     padding: 0;
     border: none;
     outline: none;
-    &:hover, &:focus {
-        outline: none;
-        background: transparent;
-        color: transparent;
-        &:before {
-            opacity: $slick-opacity-on-hover;
-        }
+    z-index: 100;
+    @include r(500) {
+        width: 18px;
+        height: 26px;
     }
+    // &:hover, &:focus {
+    //     outline: none;
+    //     background: transparent;
+    //     color: transparent;
+    //     &:before {
+    //         opacity: $slick-opacity-on-hover;
+    //     }
+    // }
     &.slick-disabled:before {
         opacity: $slick-opacity-not-active;
     }
@@ -95,31 +100,41 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: -25px;
+    left: 0;
+    margin-left: 18px;
+    background: url('../img/arr-left-slider.png');
     [dir="rtl"] & {
         left: auto;
         right: -25px;
     }
-    &:before {
-        content: $slick-prev-character;
-        [dir="rtl"] & {
-            content: $slick-next-character;
-        }
+    @include r(500) {
+        background: url('../img/arr-left-slider-sm.png') no-repeat;
     }
+    // &:before {
+    //     content: '';
+    //     [dir="rtl"] & {
+    //         content: $slick-prev-character;
+    //     }
+    // }
 }
 
 .slick-next {
-    right: -25px;
+    margin-right: 18px;
+    right: 0;
+    background: url('../img/arr-right-slider.png') no-repeat;
     [dir="rtl"] & {
         left: -25px;
         right: auto;
     }
-    &:before {
-        content: $slick-next-character;
-        [dir="rtl"] & {
-            content: $slick-prev-character;
-        }
+    @include r(500) {
+        background: url('../img/arr-right-slider-sm.png') no-repeat;
     }
+    // &:before {
+    //     content: $slick-next-character;
+    //     [dir="rtl"] & {
+    //         content: '';
+    //     }
+    // }
 }
 
 /* Dots */

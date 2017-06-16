@@ -1,22 +1,26 @@
 .header
     padding: 22px 0
-    height: 78px
 .footer
     background: #f3b29d
     &__wrap
         margin: 0 -10px
         padding: 38px 35px
-        height: 310px
         border-left: 10px solid #fff
-        border-right: 11px solid #fff
+        border-right: 10px solid #fff
         box-sizing: border-box
-        background: #e8663c
+        background: $main-red
+        +r(767)
+            border: 0
     &__mssg
         margin-bottom: 20px
     &__item
         margin: 0 32px
         width: 33%
         float: left
+        +r(500)
+            margin: 0 0 20px 0
+            width: 100%
+            float: none
     &__text
         font-family: "Helvetica Neue"
         font-size: 12px
@@ -27,11 +31,11 @@
         font-family: "Helvetica Neue"
         font-size: 12px
         line-height: 14px
-        color: #f3b29d
+        color: $secondary-pink
         font-weight: 400
     &__time
         margin-top: 8px
-        color: #f3b29d
+        color: $secondary-pink
         font-family: "Helvetica Neue"
         font-size: 12px
         font-weight: 400

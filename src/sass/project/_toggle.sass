@@ -1,0 +1,18 @@
+.toggle
+    padding: 5px 10px 10px 10px
+    border: 1px solid $main-red
+    border-radius: 4px
+    background-color: #fff
+    float: right
+    display: none
+    &:hover &__bar
+        background-color: $secondary-pink
+    +r(500)
+        display: block
+    &__bar
+        margin-top: 5px
+        display: block
+        background-color: $main-red
+        width: 22px
+        height: 2px
+        border-radius: 1px

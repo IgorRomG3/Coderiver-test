@@ -1,32 +1,47 @@
 .content
     width: 70%
     float: left
-    position: relative
+    +r(600)
+        width: 100%
+        float: none
     &__item
         margin-bottom: 57px
     &__aside
         width: 22%
         float: left
     &__info
+        display: block
         font-size: 12px
         font-weight: 400
         line-height: 20px
-        color: #e8603c
+        color: $main-red
         font-family: Bebas
+        +css-lock(9, 12, 600, 991)
     &__subinfo
         margin-bottom: 16px
+        display: block
         font-size: 12px
         color: #bababa
         font-family: "Helvetica Neue"
+        +css-lock(10, 12, 600, 991)
     &__text 
         width: 78%
         float: right
     &__img
         margin-bottom: 24px
     &__img-left
-        position: absolute
-        top: 0
-        left: -80px
+        width: 75px
+        height: 75px
+        float: left
+        margin-left: -86px
+        +r(1111)
+            display: none
+    &__wrap
+        padding: 25px 30px 19px 76px
+        position: relative
+        background: url('../img/quote.png') no-repeat
+        background-position: 34px 20px
+        background-color: #f4f4f4
     &__gradient
         margin-top: 51px
         width: 100%

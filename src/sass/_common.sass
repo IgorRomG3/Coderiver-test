@@ -4,15 +4,17 @@
 	outline: none
 body
 	background: url('../img/bg.png')
-	// +css-lock(16, 50, 600, 1000)
 	line-height: 1.4
 a
 	text-decoration: none
+p
+	+css-lock(12, 16, 600, 1000)
 img
 	width: 100%
 .container
 	margin: 0 auto
 	+r(767)
+		padding: 0 10px
 		width: 100%
 	+rmin(768)
 		width: 750px
@@ -20,3 +22,7 @@ img
 		width: 940px
 .clearfix
 	clear: both
+	&__sm
+		display: none
+		+r(500)
+			display: block

@@ -1,6 +1,9 @@
 .sidebar
     width: 25%
     float: right
+    +r(600)
+        width: 100%
+        float: none
     &__item
         margin-bottom: 37px
     &__link
@@ -8,6 +11,7 @@
         font-family: "Helvetica Neue"
         font-size: 12px
         font-weight: 400
+        +css-lock(10,12,600,991)
     &__portfolio
         display: grid
         grid-template-columns: repeat(4, 20%)

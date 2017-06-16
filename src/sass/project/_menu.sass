@@ -1,10 +1,25 @@
 .menu
-    padding-top: 14px
+    padding-top: 12px
     float: right
+    +r(767)
+        padding-top: 9px
+    +r(500)
+        padding: 0
+        max-height: 0
+        background-color: #fff
+        float: none
+        overflow: hidden
+        text-align: center
+        transition: max-height 0.7s ease
+        &_js
+            max-height: 500px
+            transition: max-height 1.5s ease
     &__item
+        margin-left: 26px
         display: inline-block
-        &:nth-child(n+2)
-            margin-left: 26px
+        +r(500)
+            margin-top: 10px
+            display: block
     &__link
         color: #b9b9b9
         font-family: Bebas
@@ -13,3 +28,4 @@
         text-transform: uppercase
         &:hover
             color: #e8603c
+        +css-lock(13, 16, 600, 991)
